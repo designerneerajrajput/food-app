@@ -4,10 +4,256 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  position: relative;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  bottom: 0;
+  left: 0;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#root:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000006e !important;
+  background-size: cover;
+  z-index: 2;
+}
+
+#root .container {
+  position: relative;
+  z-index: 9;
+}
+
+.search-meal-wrap {
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 46px;
+}
+
+.search-meal-wrap input {
+  border-radius: 0;
+  height: 45px;
+}
+
+.search-meal-wrap button.btn.btn-outline-success {
+  background: #FF9800;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.cat-wrap h3,
+.notfound {
+  text-align: center;
+  font-size: 30px;
+
+  color: red;
+}
+
+.cat-wrap ul {
+  gap: 29px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cat-wrap ul li {
+  list-style: none;
+}
+
+.cat-wrap ul li a {
+  background: #4CAF50;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 20px;
+  border-radius: 100px;
+}
+
+
+
+.cat-wrap ul li a:hover {
+  background: #3F51B5;
+}
+
+.meals-card img {
+  /* width: 100%; */
+  /* height: 230px; */
+  /* width: 100%; */
+  /* object-fit: cover; */
+  height: 195px;
+  /* width: 200px; */
+  border-radius: 50%;
+  /* margin-top: -92px; */
+  /* border: 3px solid #fff; */
+}
+
+.meals-card .img-wrap {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: -92px;
+  border: 2px dashed #fff;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head p {
+  font-size: 20px;
+  color: #ffac0d;
+}
+
+.meals-card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.meals-card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 23px;
+  margin-top: 98px;
+  padding-bottom: 40px;
+  background: #00000094;
+  transition: .4s;
+}
+
+.meals-card:hover {
+  background-color: #ffffff52 !important;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 23px;
+  margin-top: 98px;
+  padding-bottom: 40px;
+  background: #2d2d2d;
+  margin-top: 52px;
+}
+
+.meals-card:hover h4 {
+  color: #000;
+}
+
+
+
+.meals-card:hover a {
+  color: #fff;
+  background-color: #000;
+}
+
+.meals-card h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.meals-card a {
+  background: #FFC107;
+  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+section.means-section {
+
+  padding: 60px 0;
+}
+
+section.means-section .img-wrap img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+section.means-section .meal-details-wrap {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+section.means-section .meal-details-wrap h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.head h2 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.head {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.App {
+
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+body .container {
+  position: relative;
+  z-index: 9;
 }
